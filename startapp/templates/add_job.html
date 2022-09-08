@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="job_name" placeholder="job">
+        <select name="city">
+            <option value="Город">Город</option>
+            {% for city in cities %}
+                <option value="{{ city.name }}">{{ city.name }}</option>
+            {% endfor %}
+        </select>
+        <select name="category">
+            <option value="Категория">Категория</option>
+            {% for category in categories %}
+                <option value="{{ category.name }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
